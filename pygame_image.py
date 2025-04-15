@@ -23,19 +23,28 @@ def main():
     tmr = 0
     x = tmr#練習６
     while True:
+       
         for event in pg.event.get():
+           
             if event.type == pg.QUIT: return
+        a=0
+        b=0
         key_lst = pg.key.get_pressed()#・キーの押下状態リストを取得
         if key_lst[pg.K_UP]:
-          kk_rct.move_ip((0, -1))
+           b= -1
         if key_lst[pg.K_DOWN]:
-          kk_rct.move_ip((0, 1))
+        
+           b= 1
         if key_lst[pg.K_LEFT]:
-          kk_rct.move_ip((-1, 0))
+           a= -2
+        
         if key_lst[pg.K_RIGHT]:
-          kk_rct.move_ip((2, 0))
+           a= 2
+        
         if not key_lst[pg.K_LEFT]:#演習１
-          kk_rct.move_ip((-1, 0))
+           a-=1
+        
+        kk_rct.move_ip((a,b))
         
 
 
