@@ -14,14 +14,15 @@ def main():
     kk_img = pg.transform.flip(kk_img, True, False)
 
     tmr = 0
-    x = tmr
+    x = tmr#練習６
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
     
         x = tmr
-        screen.blit(bg_img, [-x, 0])
-        screen.blit(kk_img, [300, 200])
+        screen.blit(bg_img, [-x, 0])#練習６
+        screen.blit(bg_img, [-x+1600, 0])#練習７
+        screen.blit(kk_img, [300, 200])#練習４
         pg.display.update()
         tmr += 1
       
